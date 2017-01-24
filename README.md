@@ -9,6 +9,11 @@
 <img src="https://github.com/BrOncOVu/TaskbarPlus_Repetier-Host/blob/master/image%20preview/TaskbarPlus_preview.png" width="789" height="616" /></p>
 <p>REQUISITE:</p>
 <p>Windows 7 or above</p>
+<p>DOWNLOAD:</p>
+<p>All file are in the binary folder
+<a href="https://github.com/BrOncOVu/TaskbarPlus_Repetier-Host/blob/master/Binary/TaskbarPlus.zip">Download the zip file</a></p>
+
+
 <p>INSTALLATION:</p>
 <p>Copy the te file TaskbarPlus.dll and the folder translations\ in the repetier host plugin folder in a folder called &quot;TaskbarPlus&quot;, ex: </p>
 <p>C:\Program Files\Repetier-Host\plugins\TaskbarPlus\TaskbarPlus.dll</p>
