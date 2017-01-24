@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translation revision="1" language="Italiano" languageInEnglish="Italian" author="BrOncO">
+<t id="TP_NONE" ver="1">Nessuno</t>
+<t id="TP_FREQUENT" ver="1">Frequente</t>
+<t id="TP_RECENT" ver="1">Recenti</t>
+<t id="TP_CB_AUTO_TOOL" ver="1">Seleziona il tipo di liste automatiche ( recenti, frequenti)</t>
+
+<t id="TP_L_TITLE" ver="1">Impostazioni TaskbarPlus</t>
+<t id="TP_L_VERSION" ver="1">Versione:</t>
+<t id="TP_L_TASKLIST" ver="1">Aggiungi un link nella jump list</t>
+<t id="TP_L_AUTOLIST" ver="1">Lista automatica</t>
+
+<t id="TP_B_ADD" ver="1">Aggiungi</t>
+<t id="TP_B_ADD_TOOL" ver="1">Aggiungi un nuovo link nella jump list</t>
+<t id="TP_B_EDIT" ver="1">Modifica</t>
+<t id="TP_B_EDIT_TOOL" ver="1">Modifica il link selezionato</t>
+<t id="TP_B_DELETE" ver="1">Elimina</t>
+<t id="TP_B_DELETE_TOOL" ver="1">Elimina il link selezionato</t>
+<t id="TP_B_RELOAD" ver="1">Ricarica</t>
+<t id="TP_B_RELOAD_TOOL" ver="1">Ricarica tutti i link nella jump list</t>
+<t id="TP_B_UP_TOOL" ver="1">Sposta in su l'elemento selezionato nella lista</t>
+<t id="TP_B_DOWN_TOOL" ver="1">Sposta in giù l'elemento selezionato nella lista</t>
+<t id="TP_B_DELAUTO" ver="1">Cancella lista automatica</t>
+<t id="TP_B_DELAUTO_TOOL" ver="1">Cancella la lista Recenti/Frequente nella taskbar</t>
+
+<t id="TP_G_JUMPLIST" ver="1">Impostazioni jump list</t>
+<t id="TP_G_ICON" ver="1">Impostazioni icona taskbar</t>
+
+<t id="TP_C_ICONOVER" ver="1">Mostra icona sovrapposta</t>
+<t id="TP_C_ICONOVER_TOOL" ver="1">Mostra una piccola icona sovrapposta a quella principale nella taskbar</t>
+<t id="TP_C_PROGRESSBAR" ver="1">Mostra barra di progressione</t>
+<t id="TP_C_PROGRESSBAR_TOOL" ver="1">Mostra una barra di progressione nella taskbar</t>
+
+<t id="TP_COLU_1" ver="1">Nome link</t>
+<t id="TP_COLU_2" ver="1">Descrizione</t>
+<t id="TP_COLU_3" ver="1">link</t>
+<t id="TP_COLU_4" ver="1">Argomenti</t>
+<t id="TP_COLU_5" ver="1">Icona</t>
+
+<t id="TP_AE_FORMTITLE" ver="1">Parametri link</t>
+<t id="TP_AE_NAME" ver="1">Nome</t>
+<t id="TP_AE_DESCR" ver="1">Descrizione</t>
+<t id="TP_AE_PATH" ver="1">link</t>
+<t id="TP_AE_ARG" ver="1">Argomenti</t>
+<t id="TP_AE_ICON" ver="1">Icona</t>
+<t id="TP_AE_SELECT" ver="1">Seleziona...</t>
+<t id="TP_AE_SAVE" ver="1">Salva</t>
+<t id="TP_AE_CANCEL" ver="1">Cancella</t>
+<t id="TP_AE_NAMETOOL" ver="1">il nome del link che viene mostrato nella jump list</t>
+<t id="TP_AE_DESCTOOL" ver="1">Descrizione del link, appare passando con il mouse sopra il link nella jump list</t>
+<t id="TP_AE_PATHTOOL" ver="1">percorso del link, puo essere un qualsiasi file o una cartella</t>
+<t id="TP_AE_ARGTOOL" ver="1">Argomenti passati con il link</t>
+<t id="TP_AE_ICONTOOL" ver="1">il percorso dove si trova l'icona, percorso e indice separati da una virgola.. link,index</t>
+
+<t id="TP_ERR_NAME" ver="1">Inserisci un nome per il link</t>
+<t id="TP_ERR_PATH" ver="1">inserisci il percorso per il link</t>
+</translation>
+

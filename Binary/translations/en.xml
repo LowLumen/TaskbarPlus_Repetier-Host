@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translation revision="1" language="English" languageInEnglish="English" author="BrOncO">
+<t id="TP_NONE" ver="1">None</t>
+<t id="TP_FREQUENT" ver="1">Frequent</t>
+<t id="TP_RECENT" ver="1">Recent</t>
+<t id="TP_CB_AUTO_TOOL" ver="1">Select the automatic list type ( recent, frequent)</t>
+
+<t id="TP_L_TITLE" ver="1">TaskbarPlus settings</t>
+<t id="TP_L_VERSION" ver="1">Version:</t>
+<t id="TP_L_TASKLIST" ver="1">Add links in the jump list</t>
+<t id="TP_L_AUTOLIST" ver="1">Automatic list</t>
+
+<t id="TP_B_ADD" ver="1">Add new</t>
+<t id="TP_B_ADD_TOOL" ver="1">Add new link in the jump list</t>
+<t id="TP_B_EDIT" ver="1">Edit</t>
+<t id="TP_B_EDIT_TOOL" ver="1">Edit selected link</t>
+<t id="TP_B_DELETE" ver="1">Delete</t>
+<t id="TP_B_DELETE_TOOL" ver="1">Delete selected link</t>
+<t id="TP_B_RELOAD" ver="1">Reload</t>
+<t id="TP_B_RELOAD_TOOL" ver="1">reload the jump list in the taskbar</t>
+<t id="TP_B_UP_TOOL" ver="1">Move up the selected item in the list</t>
+<t id="TP_B_DOWN_TOOL" ver="1">Move down the selected item in the list</t>
+<t id="TP_B_DELAUTO" ver="1">Clear automatic list</t>
+<t id="TP_B_DELAUTO_TOOL" ver="1">Clear the Recent/Frequent list in the taskbar</t>
+
+<t id="TP_G_JUMPLIST" ver="1">Jump list settings</t>
+<t id="TP_G_ICON" ver="1">Taskbar icon settings</t>
+
+<t id="TP_C_ICONOVER" ver="1">Show icon overlay</t>
+<t id="TP_C_ICONOVER_TOOL" ver="1">Show the small icon over the repetier host icon in the taskbar (play, stop, pause icon)</t>
+<t id="TP_C_PROGRESSBAR" ver="1">Show progress bar</t>
+<t id="TP_C_PROGRESSBAR_TOOL" ver="1">Show a progress bar in the taskbar</t>
+
+<t id="TP_COLU_1" ver="1">Link name</t>
+<t id="TP_COLU_2" ver="1">Description</t>
+<t id="TP_COLU_3" ver="1">Path</t>
+<t id="TP_COLU_4" ver="1">Arguments</t>
+<t id="TP_COLU_5" ver="1">Icon</t>
+
+<t id="TP_AE_FORMTITLE" ver="1">Link parameters</t>
+<t id="TP_AE_NAME" ver="1">Name</t>
+<t id="TP_AE_DESCR" ver="1">Description</t>
+<t id="TP_AE_PATH" ver="1">Path</t>
+<t id="TP_AE_ARG" ver="1">Arguments</t>
+<t id="TP_AE_ICON" ver="1">Icon path</t>
+<t id="TP_AE_SELECT" ver="1">Select...</t>
+<t id="TP_AE_SAVE" ver="1">Save</t>
+<t id="TP_AE_CANCEL" ver="1">Cancel</t>
+<t id="TP_AE_NAMETOOL" ver="1">Name for the link, show in the jump list</t>
+<t id="TP_AE_DESCTOOL" ver="1">The description for the link, shown when the mouse is passed over the link in the jump list</t>
+<t id="TP_AE_PATHTOOL" ver="1">The path for the link, is possible to use file, folder or web link</t>
+<t id="TP_AE_ARGTOOL" ver="1">Arguments past with the link</t>
+<t id="TP_AE_ICONTOOL" ver="1">The icon path show near the link, path and index separated by comma link,index</t>
+
+<t id="TP_ERR_NAME" ver="1">Insert a name for the link</t>
+<t id="TP_ERR_PATH" ver="1">Insert a path for the link</t>
+</translation>
