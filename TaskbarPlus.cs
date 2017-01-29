@@ -27,12 +27,34 @@ namespace TaskbarPlus
             
             // Set the appUserModelID to Repetierhost.exe process befor UI is loaded
             SetCurrentProcessExplicitAppUserModelID(Settings.AppUserModelIDs);
-            // Set a key in the windows registry.
+
+            // Write the AppUserModelID in the Repetier-Host registry key
+            // for associate opened file to repetier host, for the recent/frequent list.
             // If the plugin is deleted this string remain in the registry
             // and the recent/frequent list not work correctly!!
-            SetRegKey(); 
+
+            // Repetier host registry key
+            string registrykeyPath = "Software\\Classes\\Repetier-Host";
+
+            Microsoft.Win32.RegistryKey key;
+            key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(registrykeyPath);
+
+            // if key not exist return(probable not possible if repetier host is installed)
+            if (key == null)
+                return;
+            // if AppUserModelID exist check if is correct
+            if (key.GetValue("AppUserModelID") != null
+               && Settings.AppUserModelIDs == key.GetValue("AppUserModelID").ToString())
+                return;
+                
             
+               
+            // if key not exist or incorrect add it, is the first load for the plugin!!
+            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(registrykeyPath);
+            key.SetValue("AppUserModelID", Settings.AppUserModelIDs);
+            key.Close();         
         }
+
         /// <summary>
         /// Called after everything is initalized to finish parts, that rely on other initializations.
         /// Here you must create and register new Controls and Windows.
@@ -88,26 +110,6 @@ namespace TaskbarPlus
             // Set the appUserModelID to repetier host window
             //  using this if SetCurrentProcessExplicitAppUserModelID not work
             // AppID.SetWindowAppId(host.HostWindow.Handle, settings.AppUserModelIDs);
-        }
-
-        /// <summary>
-        /// Write the AppUserModelID in the Repetier-Host registry key
-        /// </summary>
-        private bool SetRegKey()
-        {
-            Microsoft.Win32.RegistryKey key;
-
-            key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(Settings.registrykeyPath);
-            // if AppUserModelID exist return;
-            if (key == null || key.GetValue("AppUserModelID") != null)
-                return false;
-
-            // if key not exist add it, is the first load for the plugin!!
-            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(Settings.registrykeyPath);
-            key.SetValue("AppUserModelID", Settings.AppUserModelIDs);
-            key.Close();
-
-            return true;
         }
 
 

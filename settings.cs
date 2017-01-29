@@ -5,19 +5,17 @@ namespace TaskbarPlus
 {
     /// <summary>
     /// This static class is used for store all settings for the plugin
-    /// Only iconOverlay and progressBar ar saved/loaded in the windows registry
+    /// Only iconOverlay and progressBar ar saved/loaded in/from the windows registry
     /// the other parameters are hard coded
     /// </summary>
     internal static class Settings
     {      
-        // TaskbarPlus version
-        public static string pluginVersion = "1.0";
+        // TaskbarPlus plugin version
+        public static string pluginVersion = "1.1.0";
         // Plugin home page
-        public static string homepage = "https://github.com/BrOncOVu/TaskbarPlus_Repetier";
+        public static string homepage = "https://github.com/BrOncOVu/TaskbarPlus_Repetier-Host";
         // Repetier-Host AppUserModelID
         public static string AppUserModelIDs = "Repetier-Host";
-        // Repetier host registry key used for add the AppUserModelID
-        public static string registrykeyPath = "Software\\Classes\\Repetier-Host";
         // If true debug info is added in the repetier host log.
         public static bool debugON = false;
         // only windows 7 and later support this taskbar feature
@@ -29,9 +27,9 @@ namespace TaskbarPlus
 
         
         /// <summary>
-        /// Load all settings from the registry
+        /// Load plugin settings from the registry
         /// </summary>
-        /// <param name="_host">IHost</param>
+        /// <param name="_host">IHost instance</param>
         public static void load_Settings(IHost _host)
         {
             IRegMemoryFolder Ireg = _host.GetRegistryFolder("TaskbarPlus");
@@ -40,7 +38,10 @@ namespace TaskbarPlus
             progressBar = Ireg.GetBool("progressBar", true);        
         }
 
-        // Check if is windows 7 or recent OS
+        /// <summary>
+        /// Check if the version of windows support taskbar feature
+        /// </summary>
+        /// <returns></returns>
         private static bool CheckOSVersion()
         {
             System.OperatingSystem osInfo = System.Environment.OSVersion;

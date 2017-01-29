@@ -127,51 +127,47 @@ namespace TaskbarPlus
         // Enable or disable buttons if item in the listview is selected or not
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // check if item is selected in the listview
+            // check if one item in the listview is selected
             if (listView1.SelectedItems.Count == 0)
             {
-                // no item selected, disable buttons and RETURN!
-                if (button_delete.Enabled) button_delete.Enabled = false;
-                if (button_edit.Enabled) button_edit.Enabled = false;
-                if (button_down.Enabled) button_down.Enabled = false;
-                if (button_up.Enabled) button_up.Enabled = false;
+                // no item selected, disable all buttons and RETURN!
+                button_delete.Enabled = false;
+                button_edit.Enabled = false;
+                button_down.Enabled = false;
+                button_up.Enabled = false;
 
                 return;
             }
 
-            // Item is selected
-            
-            // Enable buttons
-            if (!button_delete.Enabled) button_delete.Enabled = true;
-            if (!button_edit.Enabled) button_edit.Enabled = true;
+            /// At least one item is selected, enable specific buttons
+
+            // Enable delete/Edit buttons
+            button_delete.Enabled = true;
+            button_edit.Enabled = true;
 
             // Enable or disable UP/DOWN buttons
-
             if (listView1.SelectedItems[0].Index == 0)
             {
                 //selected item is the first in the list, disable UP button
-                if (button_up.Enabled) button_up.Enabled = false;
+                button_up.Enabled = false;
                 // Check if only 1 item is in the listview
                 if (listView1.Items.Count > 1)
                 {
                     //multiple items in the list, enable DOWN button
-                    if (!button_down.Enabled) button_down.Enabled = true;
-                }
-
-                return;
+                    button_down.Enabled = true;
+                }       
             }
-
             // selected item is not the first in the list?
-            if (listView1.SelectedItems[0].Index >= 1)
+            else if (listView1.SelectedItems[0].Index > 0)
             {
                 // enable UP button
-                if (!button_up.Enabled) button_up.Enabled = true;
+                button_up.Enabled = true;
 
                 // check if selected item is not the last item
                 if (listView1.Items.Count > listView1.SelectedItems[0].Index + 1)
                 {
                     // is not the last, enable DOWN button
-                    if (!button_down.Enabled) button_down.Enabled = true;
+                    button_down.Enabled = true;
                 }
             }
 
@@ -234,11 +230,11 @@ namespace TaskbarPlus
         }
 
 
-        #region items list buttons actions
+        #region items list buttons click event
 
         private void button_AddNew_Click(object sender, EventArgs e)
         {
-            // used for passing data between forms
+            // used for pass data between forms
             string[] allParams = null;
 
             // Open the new form 
@@ -268,6 +264,10 @@ namespace TaskbarPlus
             item.ToolTipText = buildItemToolTips(item);
             // add item in the listview
             listView1.Items.Add(item);
+            // update buttons status
+            listView1_SelectedIndexChanged(null, null);
+
+
             // update the jumplist in the taskbar
             add_JumpList_to_taskbar();
         }
@@ -314,6 +314,7 @@ namespace TaskbarPlus
             // no item selected in the list
             if (listView1.SelectedItems.Count == 0)
                 return;
+
             // Delete item from listview
             listView1.BeginUpdate();
             listView1.Items.Remove(listView1.SelectedItems[0]);
