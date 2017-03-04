@@ -11,7 +11,7 @@ namespace TaskbarPlus
     internal static class Settings
     {      
         // TaskbarPlus plugin version
-        public static string pluginVersion = "1.1.0";
+        public static string pluginVersion = "1.0";
         // Plugin home page
         public static string homepage = "https://github.com/BrOncOVu/TaskbarPlus_Repetier-Host";
         // Repetier-Host AppUserModelID
